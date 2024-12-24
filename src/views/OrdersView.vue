@@ -1,7 +1,7 @@
 
 <template>
     <div class="card flex justify-center">
-        <Menu :model="items" class="w-full md:w-60">
+        <Menubar :model="items" class="w-full md:w-60">
             <template #start>
                 <span class="inline-flex items-center gap-1 px-2 py-2">
                     <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-8">
@@ -29,23 +29,24 @@
                 </a>
             </template>
             <template #end>
-                <button v-ripple class="relative overflow-hidden w-full border-0 bg-transparent flex items-start p-2 pl-4 hover:bg-surface-100 dark:hover:bg-surface-800 rounded-none cursor-pointer transition-colors duration-200">
+                <Button v-ripple class="relative overflow-hidden w-full border-0 bg-transparent flex items-start p-2 pl-4 hover:bg-surface-100 dark:hover:bg-surface-800 rounded-none cursor-pointer transition-colors duration-200">
                     <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" class="mr-2" shape="circle" />
                     <span class="inline-flex flex-col items-start">
                         <span class="font-bold">Amy Elsner</span>
                         <span class="text-sm">Admin</span>
                     </span>
-                </button>
+                </Button>
             </template>
-        </Menu>
+        </Menubar>
     </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
-import Menu from 'primevue/menu';
+import Menubar from 'primevue/menubar';
 import Avatar from 'primevue/avatar';
 import Badge from 'primevue/badge';
+import Button from 'primevue/button';
 
 const items = ref([
     {
