@@ -1,7 +1,11 @@
 <template>
+    <div class="wallet-chip">
+        <Chip label="$ 567 " icon="pi pi-wallet"  />
+        <Tag icon="pi pi-wallet" severity="success" value="" rounded>$ 567</Tag>
+    </div>
     <div class="avatar flex justify-center align-items-center">
         <Avatar :image="logo" class="mr-2" size="large" />
-        <h1>Mandarin Cargo</h1>
+        <h1>Orders</h1>
     </div>
     <div class="card justify-center">
         <!-- <InputText class="w-full pi pi-search" type="text" v-model="value" placeholder="Search"/> -->
@@ -38,9 +42,9 @@ import PanelMenu from 'primevue/panelmenu';
 import Panel from 'primevue/panel';
 import InputText from 'primevue/inputtext';
 import Badge from 'primevue/badge';
-import OverlayBadge from 'primevue/overlaybadge';
+import Chip from 'primevue/chip';
+import Tag from 'primevue/tag';
 import Avatar from 'primevue/avatar';
-import AvatarGroup from 'primevue/avatargroup';
 import InputGroup from 'primevue/inputgroup';
 import Button from 'primevue/button';
 import InputGroupAddon from 'primevue/inputgroupaddon';
@@ -201,6 +205,28 @@ const items = ref([
 </script>
 
 <style>
+.wallet-chip{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin-top: -6px;
+    margin-bottom: -16px;
+}
+
+.wallet-chip .bg-primary {
+    background-color: rebeccapurple;
+}
+
+.bg-primary{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
 .avatar{
     margin-bottom: 5px;
 }

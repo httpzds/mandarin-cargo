@@ -1,7 +1,7 @@
 <template>
     <div class="avatar">
         <Avatar :image="logo" class="mr-2" />
-        <p>News</p>
+        <h3>News</h3>
     </div>
     <div class="menu">
         <ul>
