@@ -1,15 +1,10 @@
 <template>
   <div>
-    <div class="main-nav">
-      <Button class="nav-item" as="router-link" label="Bosh sahifa" to="/" />
-      <Button class="nav-item" as="router-link" label="Buyurtmalar" to="/orders" />
-    </div>
-    
     <div class="fixed-nav">
-      <Button class="nav-item" icon="pi pi-home" as="router-link" to="/" />
-      <Button class="nav-item" icon="pi pi-shopping-bag" as="router-link" to="/orders" />
-      <Button class="nav-item" icon="pi pi-bell" as="router-link" to="/profile" />
-      <Button class="nav-item" icon="pi pi-bars" as="router-link" to="/settings" />
+      <Button class="nav-item" icon="pi pi-home" variant="text" rounded aria-label="Home" as="router-link" to="/" size="large"/>
+      <Button class="nav-item" icon="pi pi-shopping-bag" variant="text" rounded aria-label="Bag" as="router-link" to="/orders" size="large"/>
+      <Button class="nav-item" icon="pi pi-bell" variant="text" rounded aria-label="Bell" as="router-link" to="/news" size="large"/>
+      <Button class="nav-item" icon="pi pi-bars" variant="text" rounded aria-label="Bar" as="router-link" to="/settings" size="large"/>
     </div>
 
     <router-view></router-view>
@@ -21,12 +16,6 @@ import Button from "primevue/button";
 </script>
 
 <style>
-.main-nav {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
-}
-
 .fixed-nav {
   position: fixed;
   bottom: 0;
@@ -52,6 +41,7 @@ import Button from "primevue/button";
 }
 
 .nav-item.router-link-exact-active {
-  background-color: rgba(0, 123, 255, 0.9);
+  /* background-color: rgba(0, 123, 255, 0.9); */
+  background-color: rgba(180, 244, 185, 0.9);
 }
 </style>

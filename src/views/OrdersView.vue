@@ -1,6 +1,6 @@
 <template>
     <div class="avatar flex justify-center align-items-center">
-        <Avatar icon="pi pi-user" class="mr-2" size="large" />
+        <Avatar :image="logo" class="mr-2" size="large" />
         <h1>Mandarin Cargo</h1>
     </div>
     <div class="card justify-center">
@@ -16,8 +16,19 @@
             <InputText placeholder="Keyword" />
         </InputGroup>
     </div>
-    <Panel class="panel">
+    <!-- <Panel class="panel">
         <PanelMenu :model="items" class="w-full md:w-80 panel-menu" />
+    </Panel> -->
+    <Panel class="panel">
+        <PanelMenu :model="items" class="w-full md:w-80 panel-menu">
+            <template #item="{ item }">
+                <a v-ripple class="flex align-items-center px-3 py-2 cursor-pointer group">
+                    <span :class="[item.icon, 'text-primary group-hover:text-inherit']" />
+                    <span class="ml-2">{{ item.label }}</span>
+                    <Badge v-if="item.badge" class="ml-auto" :value="item.badge" />
+                </a>
+            </template>
+        </PanelMenu>
     </Panel>
 </template>
 
@@ -34,10 +45,13 @@ import InputGroup from 'primevue/inputgroup';
 import Button from 'primevue/button';
 import InputGroupAddon from 'primevue/inputgroupaddon';
 
+import logo from "@/assets/logo.png";
+
 const items = ref([
     {
         label: 'Pending',
         icon: 'pi pi-clock',
+        badge: 3,
         items: [
             {
                 label: 'Documents',
