@@ -1,93 +1,125 @@
 <template>
-    <div class="avatar flex justify-center align-items-center">
+    <div class="avatar">
         <Avatar :image="logo" class="mr-2" />
+        <p>News</p>
     </div>
     <div class="menu">
         <ul>
             <li>
-                <div class="menu-item">
-                    <div class="icon-box" style="background-color: blue; border: none;">
-                        <i class="pi pi-box" style="color: white;"></i>
+                <a href="#" class="menu-link">
+                    <div class="menu-item">
+                        <div class="icon-box" style="background-color: blue; border: none;">
+                            <i class="pi pi-box" style="color: white;"></i>
+                        </div>
+                        <span>Parcel Status</span>
+                        <i class="arrow pi pi-chevron-right"></i>
                     </div>
-                    <span>Parcel Status</span>
-                    <i class="arrow pi pi-chevron-right"></i>
-                </div>
+                </a>
             </li>
             <li>
-                <div class="menu-item">
-                    <div class="icon-box" style="background-color: yellow; border: none;">
-                        <i class="pi pi-book" style="color: black;"></i>
+                <a href="#" class="menu-link">
+                    <div class="menu-item">
+                        <div class="icon-box" style="background-color: yellow; border: none;">
+                            <i class="pi pi-book" style="color: black;"></i>
+                        </div>
+                        <span>News</span>
+                        <i class="arrow pi pi-chevron-right"></i>
                     </div>
-                    <span>News</span>
-                    <i class="arrow pi pi-chevron-right"></i>
-                </div>
+                </a>
             </li>
             <li>
-                <div class="menu-item">
-                    <div class="icon-box" style="background-color: blue; border: none;">
-                        <i class="pi pi-wallet" style="color: white;"></i>
+                <a href="#" class="menu-link">
+                    <div class="menu-item">
+                        <div class="icon-box" style="background-color: blue; border: none;">
+                            <i class="pi pi-wallet" style="color: white;"></i>
+                        </div>
+                        <span>Wallet</span>
+                        <i class="arrow pi pi-chevron-right"></i>
                     </div>
-                    <span>Wallet</span>
-                    <i class="arrow pi pi-chevron-right"></i>
-                </div>
+                </a>
             </li>
             <li>
-                <div class="menu-item">
-                    <div class="icon-box" style="background-color: rebeccapurple; border: none;">
-                        <i class="pi pi-star" style="color: white;"></i>
+                <a href="#" class="menu-link">
+                    <div class="menu-item">
+                        <div class="icon-box" style="background-color: rebeccapurple; border: none;">
+                            <i class="pi pi-star" style="color: white;"></i>
+                        </div>
+                        <span>Bonus</span>
+                        <i class="arrow pi pi-chevron-right"></i>
                     </div>
-                    <span>Bonus</span>
-                    <i class="arrow pi pi-chevron-right"></i>
-                </div>
+                </a>
             </li>
             <li>
-                <div class="menu-item">
-                    <div class="icon-box" style="background-color: green; border: none;">
-                        <i class="pi pi-thumbs-up" style="color: white;"></i>
+                <a href="#" class="menu-link">
+                    <div class="menu-item">
+                        <div class="icon-box" style="background-color: green; border: none;">
+                            <i class="pi pi-thumbs-up" style="color: white;"></i>
+                        </div>
+                        <span>Rating</span>
+                        <i class="arrow pi pi-chevron-right"></i>
                     </div>
-                    <span>Rating</span>
-                    <i class="arrow pi pi-chevron-right"></i>
-                </div>
+                </a>
             </li>
             <li>
-                <div class="menu-item">
-                    <div class="icon-box" style="background-color: rebeccapurple; border: none;">
-                        <i class="pi pi-map" style="color: white;"></i>
+                <a href="#" class="menu-link">
+                    <div class="menu-item">
+                        <div class="icon-box" style="background-color: rebeccapurple; border: none;">
+                            <i class="pi pi-map" style="color: white;"></i>
+                        </div>
+                        <span>New Branch</span>
+                        <i class="arrow pi pi-chevron-right"></i>
                     </div>
-                    <span>New Branch</span>
-                    <i class="arrow pi pi-chevron-right"></i>
-                </div>
+                </a>
             </li>
             <li>
-                <div class="menu-item">
-                    <div class="icon-box" style="background-color: red; border: none;">
-                        <i class="pi pi-truck" style="color: white;"></i>
+                <a href="#" class="menu-link">
+                    <div class="menu-item">
+                        <div class="icon-box" style="background-color: red; border: none;">
+                            <i class="pi pi-truck" style="color: white;"></i>
+                        </div>
+                        <span>Home Delivery</span>
+                        <i class="arrow pi pi-chevron-right"></i>
                     </div>
-                    <span>Home Delivery</span>
-                    <i class="arrow pi pi-chevron-right" ></i>
-                </div>
+                </a>
             </li>
             <li>
-                <div class="menu-item">
-                    <div class="icon-box" style="background-color: yellowgreen; border: none;">
-                        <i class="pi pi-phone" style="color: white;"></i>
+                <a href="#" class="menu-link">
+                    <div class="menu-item">
+                        <div class="icon-box" style="background-color: yellowgreen; border: none;">
+                            <i class="pi pi-phone" style="color: white;"></i>
+                        </div>
+                        <span>Support</span>
+                        <i class="arrow pi pi-chevron-right"></i>
                     </div>
-                    <span>Support</span>
-                    <i class="arrow pi pi-chevron-right"></i>
-                </div>
+                </a>
             </li>
         </ul>
     </div>
 </template>
 
 <script setup>
+import Avatar from 'primevue/avatar';
+
 import logo from "@/assets/logo.png";
 </script>
 
 <style scoped>
+.avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -15px;
+}
+
 .menu ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: inherit;
 }
 
 .menu-item {
