@@ -71,12 +71,21 @@
             </div>
         </Panel>
     </div>
+    <div class="card-container">
+        <div class="card" v-for="n in 6" :key="n">
+            <div class="card-title">Title {{ n }}</div>
+            <div class="card-pic">
+                <img :src="branch" alt="Card image" />
+            </div>
+        </div>
+    </div>
 </template>
 
 
 <script setup>
 import Panel from 'primevue/panel';
 import Button from 'primevue/button';
+import Card from 'primevue/card';
 import Select from 'primevue/select';
 
 import id_card from '@/assets/id.png';
@@ -211,7 +220,7 @@ const load = () => {
 }
 
 .menu-info{
-    margin-top: 22px;
+    margin-top: 10px;
 }
 
 .menu-link {
@@ -291,7 +300,7 @@ const load = () => {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .referral {
@@ -300,6 +309,7 @@ const load = () => {
     border-radius: 15px;
     text-align: center;
     color: white;
+    width: 100%;
 }
 
 .referral-header {
@@ -359,4 +369,44 @@ const load = () => {
     background-color: white;
 }
 
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 45px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(50% - 10px);
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-pic {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
 </style>
