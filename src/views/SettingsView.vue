@@ -9,8 +9,9 @@
             </span>
         </div>
         <div class="settings">
-            <Select v-model="selectedLang" :options="languages" optionLabel="name" placeholder="Lang"
-                class="w-full md:w-26" />
+            <!-- <Select v-model="selectedLang" :options="languages" optionLabel="name" placeholder="Lang"
+                class="w-full md:w-26" /> -->
+            <Button class="lang" type="button" icon="pi pi-language" size="large" style="color: black;" />
             <Button class="cog" type="button" icon="pi pi-cog" size="large" style="color: black;" />
         </div>
     </div>
@@ -37,6 +38,30 @@
             </div>
         </Panel>
     </div>
+    <div class="menu-info">
+        <ul>
+            <li>
+                <a href="#" class="menu-link">
+                    <div class="menu-item">
+                        <img :src="id_card" alt="User photo" class="info-photo" />
+                        <div class="content">
+                            <span class="title">Personal information</span>
+                            <span class="client"><i class="pi pi-exclamation-circle"></i>Enter your personal information</span>
+                        </div>
+                        <i class="arrow pi pi-chevron-right"></i>
+                    </div>
+                    <div class="menu-item">
+                        <img :src="branch" alt="User photo" class="info-photo" />
+                        <div class="content">
+                            <span class="title">Your branches</span>
+                            <span class="client"><i class="pi pi-exclamation-circle"></i>Enter information about branch</span>
+                        </div>
+                        <i class="arrow pi pi-chevron-right"></i>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
 </template>
 
 
@@ -44,6 +69,9 @@
 import Panel from 'primevue/panel';
 import Button from 'primevue/button';
 import Select from 'primevue/select';
+
+import id_card from '@/assets/image.png';
+import branch from '@/assets/branch.png';
 
 import { ref } from 'vue';
 
@@ -56,12 +84,12 @@ const load = () => {
     }, 2000);
 };
 
-const selectedLang = ref();
-const languages = ref([
-    { name: 'Uzbek', code: 'UZ' },
-    { name: 'Russian', code: 'RU' },
-    { name: 'English', code: 'EN' },
-]);
+// const selectedLang = ref();
+// const languages = ref([
+//     { name: 'Uzbek', code: 'UZ' },
+//     { name: 'Russian', code: 'RU' },
+//     { name: 'English', code: 'EN' },
+// ]);
 </script>
 
 <style scoped>
@@ -112,11 +140,11 @@ const languages = ref([
     color: #f3f3f3;
 }
 
-.wallet{
+.wallet {
     background-color: #007bff;
 }
 
-.bonus{
+.bonus {
     background-color: #9617e6dd;
 }
 
@@ -151,6 +179,12 @@ const languages = ref([
     margin-right: -5px;
 }
 
+.lang {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 .cog {
     background-color: transparent;
     border: none;
@@ -159,5 +193,88 @@ const languages = ref([
 
 .w-full {
     width: auto !important;
+}
+
+.menu-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-info{
+    margin-top: 22px;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.menu-item .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.icon-box {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.icon-box i {
+    font-size: 1.1rem;
+    color: white;
+}
+
+.menu-item span {
+    flex: 1;
+    margin-left: 5px;
+}
+
+.arrow {
+    color: grey;
+    font-size: 14px;
+    margin-left: auto;
+}
+
+.info-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    background-color: transparent;
+}
+
+
+.title {
+    color: #808080;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.client {
+    color: #007bff;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.client i{
+    margin-right: 6px;
 }
 </style>
