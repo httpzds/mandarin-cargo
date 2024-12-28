@@ -12,7 +12,10 @@
             <!-- <Select v-model="selectedLang" :options="languages" optionLabel="name" placeholder="Lang"
                 class="w-full md:w-26" /> -->
             <Button class="lang" type="button" icon="pi pi-language" size="large" style="color: black;" />
-            <Button class="cog" type="button" icon="pi pi-cog" size="large" style="color: black;" />
+            <Drawer v-model:visible="visibleRight" header="Drawer" position="right">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </Drawer>
+            <Button class="cog" type="button" @click="visibleRight = true" icon="pi pi-cog" size="large" style="color: black;" />
         </div>
     </div>
 
@@ -85,7 +88,7 @@
 <script setup>
 import Panel from 'primevue/panel';
 import Button from 'primevue/button';
-import Card from 'primevue/card';
+import Drawer from 'primevue/drawer';
 import Select from 'primevue/select';
 
 import id_card from '@/assets/id.png';
@@ -94,6 +97,7 @@ import branch from '@/assets/branch.png';
 import { ref } from 'vue';
 
 const loading = ref(false);
+const visibleRight = ref(false);
 
 const load = () => {
     loading.value = true;
@@ -300,7 +304,7 @@ const load = () => {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .referral {
