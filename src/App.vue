@@ -23,6 +23,7 @@ import Button from "primevue/button";
   width: 100%;
   display: flex;
   justify-content: space-around;
+  background-color: white;
   padding: 10px 0;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
