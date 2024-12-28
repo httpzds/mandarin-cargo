@@ -62,6 +62,15 @@
             </li>
         </ul>
     </div>
+    <div class="referral-panel">
+        <Panel class="referral">
+            <div class="referral-header">
+                <span class="referral-bonus">Get $20 Bonus</span>
+                <p>Share the link to the app and get a bonus</p>
+                <Button class="referral-button" label="Share Link" />
+            </div>
+        </Panel>
+    </div>
 </template>
 
 
@@ -277,4 +286,77 @@ const load = () => {
 .client i{
     margin-right: 6px;
 }
+
+.referral-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.referral {
+    background: linear-gradient(80deg, hsl(228, 94%, 59%), #15eefd);
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+}
+
+.referral-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.referral-bonus {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: -22px;
+}
+
+.referral p {
+    margin: 0;
+    font-size: 14px;
+    color: white;
+    margin-bottom: 4px;
+}
+
+.referral .p-button {
+    background-color: white;
+    background-clip: border-box;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; 
+    color: transparent;
+    margin-bottom: -8px;
+}
+
+.referral .p-button::before {
+    content: 'Share Link'; 
+    background: linear-gradient(80deg, hsl(228, 94%, 59%), #15eefd); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    color: transparent;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; 
+}
+
+.referral .p-button:hover {
+    opacity: 0.9;
+}
+
+.referral-button {
+    background-color: white;
+}
+
 </style>
