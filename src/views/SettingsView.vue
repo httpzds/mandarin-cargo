@@ -70,7 +70,7 @@ import Panel from 'primevue/panel';
 import Button from 'primevue/button';
 import Select from 'primevue/select';
 
-import id_card from '@/assets/image.png';
+import id_card from '@/assets/id.png';
 import branch from '@/assets/branch.png';
 
 import { ref } from 'vue';
@@ -251,24 +251,24 @@ const load = () => {
 }
 
 .info-photo {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    /* border-radius: 50%; */
     object-fit: cover;
-    margin-right: 10px;
+    margin-right: 8px;
     background-color: transparent;
 }
 
 
 .title {
     color: #808080;
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 3px;
 }
 
 .client {
     color: #007bff;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     display: flex;
     align-items: center;
