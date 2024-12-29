@@ -15,9 +15,13 @@ import { useI18n } from "vue-i18n";
 const { t, locale } = useI18n(); 
 
 const switchLang = () => {
-    locale.value === 'en' ? locale.value = 'ru' : locale.value = 'en'
-    localStorage.setItem('lang', locale.value)
-}
+    const availableLangs = ['en', 'ru', 'uz'];
+    const currentIndex = availableLangs.indexOf(locale.value);
+    const nextIndex = (currentIndex + 1) % availableLangs.length;
+    locale.value = availableLangs[nextIndex];
+    localStorage.setItem('lang', locale.value);
+};
+
 
 const selectedLang = ref();
 const languages = ref([
