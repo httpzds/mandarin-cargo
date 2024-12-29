@@ -1,7 +1,7 @@
 <template>
     <div class="avatar">
         <Avatar :image="logo" class="mr-2" />
-        <h3>News</h3>
+        <h3>{{$t('news')}}</h3>
     </div>
     <div class="menu">
         <ul>
@@ -11,7 +11,7 @@
                         <div class="icon-box" style="background-color: blue; border: none;">
                             <i class="pi pi-box" style="color: white;"></i>
                         </div>
-                        <span>Parcel Status</span>
+                        <span>{{$t('parcel')}}</span>
                         <i class="arrow pi pi-chevron-right"></i>
                     </div>
                 </a>
@@ -22,7 +22,7 @@
                         <div class="icon-box" style="background-color: yellow; border: none;">
                             <i class="pi pi-book" style="color: black;"></i>
                         </div>
-                        <span>News</span>
+                        <span>{{$t('news')}}</span>
                         <i class="arrow pi pi-chevron-right"></i>
                     </div>
                 </a>
@@ -33,7 +33,7 @@
                         <div class="icon-box" style="background-color: blue; border: none;">
                             <i class="pi pi-wallet" style="color: white;"></i>
                         </div>
-                        <span>Wallet</span>
+                        <span>{{$t('wallet')}}</span>
                         <i class="arrow pi pi-chevron-right"></i>
                     </div>
                 </a>
@@ -44,7 +44,7 @@
                         <div class="icon-box" style="background-color: rebeccapurple; border: none;">
                             <i class="pi pi-star" style="color: white;"></i>
                         </div>
-                        <span>Bonus</span>
+                        <span>{{$t('bonus')}}</span>
                         <i class="arrow pi pi-chevron-right"></i>
                     </div>
                 </a>
@@ -55,7 +55,7 @@
                         <div class="icon-box" style="background-color: green; border: none;">
                             <i class="pi pi-thumbs-up" style="color: white;"></i>
                         </div>
-                        <span>Rating</span>
+                        <span>{{$t('rating')}}</span>
                         <i class="arrow pi pi-chevron-right"></i>
                     </div>
                 </a>
@@ -66,7 +66,7 @@
                         <div class="icon-box" style="background-color: rebeccapurple; border: none;">
                             <i class="pi pi-map" style="color: white;"></i>
                         </div>
-                        <span>New Branch</span>
+                        <span>{{$t('new-branch')}}</span>
                         <i class="arrow pi pi-chevron-right"></i>
                     </div>
                 </a>
@@ -77,7 +77,7 @@
                         <div class="icon-box" style="background-color: red; border: none;">
                             <i class="pi pi-truck" style="color: white;"></i>
                         </div>
-                        <span>Home Delivery</span>
+                        <span>{{$t('home-delivery')}}</span>
                         <i class="arrow pi pi-chevron-right"></i>
                     </div>
                 </a>
@@ -88,7 +88,7 @@
                         <div class="icon-box" style="background-color: yellowgreen; border: none;">
                             <i class="pi pi-phone" style="color: white;"></i>
                         </div>
-                        <span>Support</span>
+                        <span>{{$t('support')}}</span>
                         <i class="arrow pi pi-chevron-right"></i>
                     </div>
                 </a>

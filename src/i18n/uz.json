@@ -12,5 +12,18 @@
         "bonus": "$20 Bonus oling",
         "desc": "Ilovaga havolani ulashing va bonus oling",
         "btn": "Havola Jo'natish"
-    }
+    },
+
+    "news": "Yangiliklar",
+    "parcel": "Posilka holati",
+    "rating": "Reyting",
+    "new-branch": "Yangi Filial",
+    "home-delivery": "Uyga etkazib berish",
+    "support": "Yordam",
+
+    "on-the-way": "Yo'lda",
+    "sorting": "Saralash jarayonida",
+    "in-delivery": "Yetkazilyapti",
+    "pick-up": "Qabul qilish nuqtasida",
+    "accepted": "Qabul qilindi"
 }

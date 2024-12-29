@@ -1,6 +1,6 @@
 <template>
     <div class="wallet-chip">
-        <Chip label="$ 567 " icon="pi pi-wallet"  />
+        <!-- <Chip label="$ 567 " icon="pi pi-wallet"  /> -->
         <Tag icon="pi pi-wallet" severity="success" value="" rounded>$ 567</Tag>
     </div>
     <div class="avatar flex justify-center align-items-center">
@@ -59,7 +59,7 @@ import logo from "@/assets/logo.png";
 
 const items = ref([
     {
-        label: 'Pending',
+        label: t('pending'),
         icon: 'pi pi-clock',
         badge: 3,
         items: [
@@ -100,7 +100,7 @@ const items = ref([
         ]
     },
     {
-        label: 'In Stock',
+        label: t('in-stock'),
         icon: 'pi pi-warehouse',
         items: [
             {
@@ -118,7 +118,7 @@ const items = ref([
         ]
     },
     {
-        label: 'On The Way',
+        label: t('on-the-way'),
         icon: 'pi pi-truck',
         items: [
             {
@@ -136,7 +136,7 @@ const items = ref([
         ]
     },
     {
-        label: 'Sorting',
+        label: t('sorting'),
         icon: 'pi pi-clipboard',
         items: [
             {
@@ -154,7 +154,7 @@ const items = ref([
         ]
     },
     {
-        label: 'In Delivery',
+        label: t('in-delivery'),
         icon: 'pi pi-box',
         items: [
             {
@@ -172,7 +172,7 @@ const items = ref([
         ]
     },
     {
-        label: 'At The Pick-Up Point',
+        label: t('pick-up'),
         icon: 'pi pi-shop',
         items: [
             {
@@ -190,7 +190,7 @@ const items = ref([
         ]
     },
     {
-        label: 'Accepted',
+        label: t('accepted'),
         icon: 'pi pi-cart-plus',
         items: [
             {
@@ -216,7 +216,7 @@ const items = ref([
     justify-content: end;
     align-items: end;
     margin-top: -6px;
-    margin-bottom: -16px;
+    margin-bottom: -26px;
 }
 
 .wallet-chip .bg-primary {

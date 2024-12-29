@@ -7,10 +7,23 @@
     "in-stock": "In Stock",
     "wallet": "Wallet",
     "bonus": "Bonus",
-    
+
     "ref-panel":{
         "bonus": "Get $20 Bonus",
         "desc": "Share the link to the app and get a bonus",
         "btn": "Share Link"
-    }
+    },
+    
+    "news": "News",
+    "parcel": "Parcel Status",
+    "rating": "Rating",
+    "new-branch": "New Branch",
+    "home-delivery": "Home Delivery",
+    "support": "Support",
+
+    "on-the-way": "On The Way",
+    "sorting": "Sorting",
+    "in-delivery": "In Delivery",
+    "pick-up": "At The Pick-Up Point",
+    "accepted": "Accepted"
 }
