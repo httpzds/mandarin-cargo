@@ -1,8 +1,16 @@
 {
-    "title": "Zakazlar",
+    "title": "Xaridlar",
     "placeholders": {
         "search": "Qidiruv"
     },
     "pending": "Kutilmoqda",
-    "in-stock": "Skladda"
+    "in-stock": "Skladda",
+    "wallet": "Hamyon",
+    "bonus": "Bonus",
+
+    "ref-panel":{
+        "bonus": "$20 Bonus oling",
+        "desc": "Ilovaga havolani ulashing va bonus oling",
+        "btn": "Havola Jo'natish"
+    }
 }

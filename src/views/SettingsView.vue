@@ -23,7 +23,7 @@
         <Panel class="wallet">
             <div class="panel-header">
                 <i class="pi pi-wallet icon"></i>
-                <span>Wallet</span>
+                <span>{{$t('wallet')}}</span>
             </div>
             <div class="panel-content">
                 <!-- <span class="balance">Balance: $100</span> -->
@@ -33,7 +33,7 @@
         <Panel class="bonus">
             <div class="panel-header">
                 <i class="pi pi-gift icon"></i>
-                <span>Bonus</span>
+                <span>{{$t('bonus')}}</span>
             </div>
             <div class="panel-content">
                 <!-- <span class="balance">Bonus: $10</span> -->
@@ -68,9 +68,9 @@
     <div class="referral-panel">
         <Panel class="referral">
             <div class="referral-header">
-                <span class="referral-bonus">Get $20 Bonus</span>
-                <p>Share the link to the app and get a bonus</p>
-                <Button class="referral-button" label="Share Link" />
+                <span class="referral-bonus">{{$t('ref-panel.bonus')}}</span>
+                <p>{{$t('ref-panel.desc')}}</p>
+                <Button class="referral-button" :label="$t('ref-panel.btn')" />
             </div>
         </Panel>
     </div>
@@ -96,6 +96,10 @@ import branch from '@/assets/branch.png';
 import SelectLang from '@/components/SelectLang.vue';
 
 import { ref } from 'vue';
+
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
 
 const loading = ref(false);
 const visibleRight = ref(false);

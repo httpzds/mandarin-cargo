@@ -4,5 +4,13 @@
         "search": "Keyword"
     },
     "pending": "Pending",
-    "in-stock": "In Stock"
+    "in-stock": "In Stock",
+    "wallet": "Wallet",
+    "bonus": "Bonus",
+    
+    "ref-panel":{
+        "bonus": "Get $20 Bonus",
+        "desc": "Share the link to the app and get a bonus",
+        "btn": "Share Link"
+    }
 }
