@@ -11,14 +11,14 @@
         <div class="settings">
             <!-- <Select v-model="selectedLang" :options="languages" optionLabel="name" placeholder="Lang"
                 class="w-full md:w-26" /> -->
-            <Button class="lang" type="button" icon="pi pi-language" size="large" style="color: black;" />
+                <SelectLang />
+            <!-- <Button class="lang" type="button" icon="pi pi-language" size="large" style="color: black;" /> -->
             <Drawer v-model:visible="visibleRight" header="Drawer" position="right">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </Drawer>
             <Button class="cog" type="button" @click="visibleRight = true" icon="pi pi-cog" size="large" style="color: black;" />
         </div>
     </div>
-
     <div class="balance-panel">
         <Panel class="wallet">
             <div class="panel-header">
@@ -89,10 +89,11 @@
 import Panel from 'primevue/panel';
 import Button from 'primevue/button';
 import Drawer from 'primevue/drawer';
-import Select from 'primevue/select';
 
 import id_card from '@/assets/id.png';
 import branch from '@/assets/branch.png';
+
+import SelectLang from '@/components/SelectLang.vue';
 
 import { ref } from 'vue';
 
@@ -122,43 +123,43 @@ const load = () => {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    padding: .625rem 1.25rem;
+    box-shadow: 0 -0.125rem .625rem rgba(0, 0, 0, 0.1);
     background-color: white;
     z-index: 1000;
 }
 
 .balance-panel {
     display: flex;
-    gap: 10px;
-    margin-top: 60px;
+    gap: .625rem;
+    margin-top: 3.75rem;
 }
 
 .balance-panel .wallet,
 .balance-panel .bonus {
     flex: 1;
-    border-radius: 13px;
-    padding: 3px;
+    border-radius: .8125rem;
+    padding: .1875rem;
 }
 
 .panel-header {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 16px;
+    gap: .625rem;
+    font-size: 1rem;
     font-weight: bold;
     color: #f8f8f8;
-    margin-top: -15px;
+    margin-top: -0.9375rem;
 }
 
 .icon {
-    font-size: 22px;
+    font-size: 1.375rem;
     color: #ffffff;
 }
 
 .panel-content {
-    margin-top: 10px;
-    font-size: 14px;
+    margin-top: .625rem;
+    font-size: .875rem;
     color: #f3f3f3;
 }
 
@@ -179,26 +180,26 @@ const load = () => {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: -1px;
+    margin-left: -0.0625rem;
 }
 
 .accaunt .id {
     font-weight: bold;
-    font-size: 22px;
-    margin-bottom: 5px;
+    font-size: 1.375rem;
+    margin-bottom: .3125rem;
     text-transform: uppercase;
 }
 
 .accaunt .phone {
-    font-size: 12px;
+    font-size: .75rem;
     color: #555;
 }
 
 .settings {
     display: flex;
-    gap: 10px;
+    gap: .625rem;
     align-items: center;
-    margin-right: -5px;
+    margin-right: -0.3125rem;
 }
 
 .lang {
@@ -224,7 +225,7 @@ const load = () => {
 }
 
 .menu-info{
-    margin-top: 10px;
+    margin-top: .625rem;
 }
 
 .menu-link {
@@ -236,7 +237,7 @@ const load = () => {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: .625rem 0;
 }
 
 .menu-item .content {
@@ -246,71 +247,71 @@ const load = () => {
 }
 
 .icon-box {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid;
+    border: .125rem solid;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: .625rem;
 }
 
 .icon-box i {
-    font-size: 1.1rem;
+    font-size: 17.6px;
     color: white;
 }
 
 .menu-item span {
     flex: 1;
-    margin-left: 5px;
+    margin-left: .3125rem;
 }
 
 .arrow {
     color: grey;
-    font-size: 14px;
+    font-size: .875rem;
     margin-left: auto;
 }
 
 .info-photo {
-    width: 45px;
-    height: 45px;
+    width: 2.8125rem;
+    height: 2.8125rem;
     /* border-radius: 50%; */
     object-fit: cover;
-    margin-right: 8px;
+    margin-right: .5rem;
     background-color: transparent;
 }
 
 
 .title {
     color: #808080;
-    font-size: 12px;
-    margin-bottom: 3px;
+    font-size: .75rem;
+    margin-bottom: .1875rem;
 }
 
 .client {
     color: #007bff;
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: bold;
     display: flex;
     align-items: center;
 }
 
 .client i{
-    margin-right: 6px;
+    margin-right: .375rem;
 }
 
 .referral-panel {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 .referral {
     background: linear-gradient(80deg, hsl(228, 94%, 59%), #15eefd);
-    padding: 10px;
-    border-radius: 15px;
+    padding: .625rem;
+    border-radius: .9375rem;
     text-align: center;
     color: white;
     width: 100%;
@@ -320,35 +321,35 @@ const load = () => {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: .625rem;
 }
 
 .referral-bonus {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: bold;
-    margin-top: -22px;
+    margin-top: -1.375rem;
 }
 
 .referral p {
     margin: 0;
-    font-size: 14px;
+    font-size: .875rem;
     color: white;
-    margin-bottom: 4px;
+    margin-bottom: .25rem;
 }
 
 .referral .p-button {
     background-color: white;
     background-clip: border-box;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 10px;
+    padding: .625rem 1.25rem;
+    border-radius: .625rem;
     border: none;
     cursor: pointer;
     position: relative;
     overflow: hidden; 
     color: transparent;
-    margin-bottom: -8px;
+    margin-bottom: -0.5rem;
 }
 
 .referral .p-button::before {
@@ -376,32 +377,32 @@ const load = () => {
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 1.25rem;
     justify-content: space-between;
-    margin-top: 20px;
-    margin-bottom: 45px;
+    margin-top: 1.25rem;
+    margin-bottom: 2.8125rem;
 }
 
 .card {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: calc(50% - 10px);
+    width: calc(50% - .625rem);
     background-color: #f9f9f9;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: .625rem;
+    border-radius: .625rem;
+    box-shadow: 0 .125rem .3125rem rgba(0, 0, 0, 0.1);
 }
 
 .card-title {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
     color: #333;
 }
 
 .card-pic {
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    height: 3.125rem;
     display: flex;
     align-items: center;
     justify-content: center;

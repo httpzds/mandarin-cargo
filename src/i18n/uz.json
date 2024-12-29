@@ -1,0 +1,8 @@
+{
+    "title": "Zakazlar",
+    "placeholders": {
+        "search": "Qidiruv"
+    },
+    "pending": "Kutilmoqda",
+    "in-stock": "Skladda"
+}

@@ -1,0 +1,8 @@
+{
+    "title": "Заказы",
+    "placeholders": {
+        "search": "Поиск"
+    },
+    "pending": "В ожидании",
+    "in-stock": "На складе"
+}

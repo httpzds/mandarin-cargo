@@ -1,11 +1,23 @@
 <template>
     <div class="language-comp">
-        <Select v-model="selectedLang" :options="languages" optionLabel="name" placeholder="Lang" class="w-full md:w-26" />
+        <!-- <Select v-model="selectedLang" :options="languages" optionLabel="name" placeholder="Lang" class="w-full md:w-26" /> -->
+        <Button class="lang" type="button" icon="pi pi-language" size="large" style="color: black;" @click="switchLang" />
     </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+import Select from 'primevue/select';
+import Button from 'primevue/button';
+
+import { useI18n } from "vue-i18n";
+
+const { t, locale } = useI18n(); 
+
+const switchLang = () => {
+    locale.value === 'en' ? locale.value = 'ru' : locale.value = 'en'
+    localStorage.setItem('lang', locale.value)
+}
 
 const selectedLang = ref();
 const languages = ref([
@@ -16,5 +28,9 @@ const languages = ref([
 </script>
 
 <style scoped>
-
+.lang {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
 </style>

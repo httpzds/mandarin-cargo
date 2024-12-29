@@ -5,7 +5,7 @@
     </div>
     <div class="avatar flex justify-center align-items-center">
         <Avatar :image="logo" class="mr-2" size="large" />
-        <h1>Orders</h1>
+        <h1>{{$t('title')}}</h1>
     </div>
     <div class="card justify-center">
         <!-- <InputText class="w-full pi pi-search" type="text" v-model="value" placeholder="Search"/> -->
@@ -17,7 +17,7 @@
             <InputGroupAddon>
                 <Button icon="pi pi-search" severity="secondary" variant="text"/>
             </InputGroupAddon>
-            <InputText placeholder="Keyword" />
+            <InputText :placeholder="$t('placeholders.search')" />
         </InputGroup>
     </div>
     <!-- <Panel class="panel">
@@ -48,6 +48,12 @@ import Avatar from 'primevue/avatar';
 import InputGroup from 'primevue/inputgroup';
 import Button from 'primevue/button';
 import InputGroupAddon from 'primevue/inputgroupaddon';
+
+// import { defineComponent } from "vue";
+
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n(); 
 
 import logo from "@/assets/logo.png";
 

@@ -1,0 +1,8 @@
+{
+    "title": "Orders",
+    "placeholders": {
+        "search": "Keyword"
+    },
+    "pending": "Pending",
+    "in-stock": "In Stock"
+}
