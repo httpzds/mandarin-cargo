@@ -11,19 +11,22 @@
         <div class="settings">
             <!-- <Select v-model="selectedLang" :options="languages" optionLabel="name" placeholder="Lang"
                 class="w-full md:w-26" /> -->
-                <SelectLang />
+            <SelectLang />
             <!-- <Button class="lang" type="button" icon="pi pi-language" size="large" style="color: black;" /> -->
             <Drawer v-model:visible="visibleRight" header="Drawer" position="right">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
             </Drawer>
-            <Button class="cog" type="button" @click="visibleRight = true" icon="pi pi-cog" size="large" style="color: black;" />
+            <Button class="cog" type="button" @click="visibleRight = true" icon="pi pi-cog" size="large"
+                style="color: black;" />
         </div>
     </div>
     <div class="balance-panel">
         <Panel class="wallet">
             <div class="panel-header">
                 <i class="pi pi-wallet icon"></i>
-                <span>{{$t('wallet')}}</span>
+                <span>{{ $t('wallet') }}</span>
             </div>
             <div class="panel-content">
                 <!-- <span class="balance">Balance: $100</span> -->
@@ -33,7 +36,7 @@
         <Panel class="bonus">
             <div class="panel-header">
                 <i class="pi pi-gift icon"></i>
-                <span>{{$t('bonus')}}</span>
+                <span>{{ $t('bonus') }}</span>
             </div>
             <div class="panel-content">
                 <!-- <span class="balance">Bonus: $10</span> -->
@@ -53,6 +56,10 @@
                         </div>
                         <i class="arrow pi pi-chevron-right"></i>
                     </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="menu-link">
                     <div class="menu-item">
                         <img :src="branch" alt="User photo" class="info-photo" />
                         <div class="content">
@@ -68,9 +75,10 @@
     <div class="referral-panel">
         <Panel class="referral">
             <div class="referral-header">
-                <span class="referral-bonus">{{$t('ref-panel.bonus')}}</span>
-                <p>{{$t('ref-panel.desc')}}</p>
+                <span class="referral-bonus">{{ $t('ref-panel.bonus') }}</span>
+                <p>{{ $t('ref-panel.desc') }}</p>
                 <Button class="referral-button" :label="$t('ref-panel.btn')" />
+                <!-- <ButtonLink/> -->
             </div>
         </Panel>
     </div>
@@ -94,6 +102,7 @@ import id_card from '@/assets/id.png';
 import branch from '@/assets/branch.png';
 
 import SelectLang from '@/components/SelectLang.vue';
+// import ButtonLink from '@/components/ButtonLink.vue';
 
 import { ref } from 'vue';
 
@@ -228,7 +237,11 @@ const load = () => {
     margin: 0;
 }
 
-.menu-info{
+.menu-info li{
+    margin-bottom: -7px;
+}
+
+.menu-info {
     margin-top: .625rem;
 }
 
@@ -301,7 +314,7 @@ const load = () => {
     align-items: center;
 }
 
-.client i{
+.client i {
     margin-right: .375rem;
 }
 
@@ -351,23 +364,23 @@ const load = () => {
     border: none;
     cursor: pointer;
     position: relative;
-    overflow: hidden; 
+    overflow: hidden;
     color: transparent;
     margin-bottom: -0.5rem;
 }
 
 .referral .p-button::before {
-    content: 'Share Link'; 
-    background: linear-gradient(80deg, hsl(228, 94%, 59%), #15eefd); 
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
+    content: 'Share Link';
+    background: linear-gradient(80deg, hsl(228, 94%, 59%), #15eefd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     color: transparent;
     position: absolute;
     inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1; 
+    z-index: 1;
 }
 
 .referral .p-button:hover {
