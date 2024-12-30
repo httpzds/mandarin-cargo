@@ -8,6 +8,11 @@
     "wallet": "Wallet",
     "bonus": "Bonus",
 
+    "personal-info": "Personal information",
+    "your-branches": "Your branches",
+    "enter-info": "Enter your personal information",
+    "enter-branches": "Enter your branches",
+
     "ref-panel":{
         "bonus": "Get $20 Bonus",
         "desc": "Share the link to the app and get a bonus",

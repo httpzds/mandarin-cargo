@@ -8,6 +8,11 @@
     "wallet": "Hamyon",
     "bonus": "Bonus",
 
+    "personal-info": "Shaxsiy ma'lumotlar",
+    "your-branches": "Sizning filiallaringiz",
+    "enter-info": "Shaxsiy ma'lumotlaringizni kiriting",
+    "enter-branches": "Filiallaringizni kiriting",
+
     "ref-panel":{
         "bonus": "$20 Bonus oling",
         "desc": "Ilovaga havolani ulashing va bonus oling",

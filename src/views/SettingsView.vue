@@ -51,8 +51,8 @@
                     <div class="menu-item">
                         <img :src="id_card" alt="User photo" class="info-photo" />
                         <div class="content">
-                            <span class="title">Personal information</span>
-                            <span class="client"><i class="pi pi-exclamation-circle"></i>Enter your personal information</span>
+                            <span class="title">{{$t('personal-info')}}</span>
+                            <span class="client"><i class="pi pi-exclamation-circle"></i>{{$t('enter-info')}}</span>
                         </div>
                         <i class="arrow pi pi-chevron-right"></i>
                     </div>
@@ -63,8 +63,8 @@
                     <div class="menu-item">
                         <img :src="branch" alt="User photo" class="info-photo" />
                         <div class="content">
-                            <span class="title">Your branches</span>
-                            <span class="client"><i class="pi pi-exclamation-circle"></i>Enter information about branch</span>
+                            <span class="title">{{$t('your-branches')}}</span>
+                            <span class="client"><i class="pi pi-exclamation-circle"></i>{{$t('enter-branches')}}</span>
                         </div>
                         <i class="arrow pi pi-chevron-right"></i>
                     </div>
