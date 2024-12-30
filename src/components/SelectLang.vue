@@ -23,12 +23,12 @@ const switchLang = () => {
 };
 
 
-const selectedLang = ref();
-const languages = ref([
-    { name: 'Uzbek', code: 'UZ' },
-    { name: 'Russian', code: 'RU' },
-    { name: 'English', code: 'EN' },
-]);
+// const selectedLang = ref();
+// const languages = ref([
+//     { name: 'Uzbek', code: 'UZ' },
+//     { name: 'Russian', code: 'RU' },
+//     { name: 'English', code: 'EN' },
+// ]);
 </script>
 
 <style scoped>
