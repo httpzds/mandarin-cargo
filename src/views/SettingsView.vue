@@ -128,14 +128,7 @@ const load = () => {
 // ]);
 </script>
 
-<style>
-.p-drawer-right .p-drawer {
-    max-width: 14rem;
-    height: 99.7%;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
-}
-
+<style scoped>
 .nav-fixed {
     position: fixed;
     top: 0;
