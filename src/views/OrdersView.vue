@@ -102,110 +102,26 @@ const items = ref([
     {
         label: t('in-stock'),
         icon: 'pi pi-warehouse',
-        items: [
-            {
-                label: 'Upload',
-                icon: 'pi pi-cloud-upload'
-            },
-            {
-                label: 'Download',
-                icon: 'pi pi-cloud-download'
-            },
-            {
-                label: 'Sync',
-                icon: 'pi pi-refresh'
-            }
-        ]
     },
     {
         label: t('on-the-way'),
         icon: 'pi pi-truck',
-        items: [
-            {
-                label: 'Phone',
-                icon: 'pi pi-mobile'
-            },
-            {
-                label: 'Desktop',
-                icon: 'pi pi-desktop'
-            },
-            {
-                label: 'Tablet',
-                icon: 'pi pi-tablet'
-            }
-        ]
     },
     {
         label: t('sorting'),
         icon: 'pi pi-clipboard',
-        items: [
-            {
-                label: 'Phone',
-                icon: 'pi pi-mobile'
-            },
-            {
-                label: 'Desktop',
-                icon: 'pi pi-desktop'
-            },
-            {
-                label: 'Tablet',
-                icon: 'pi pi-tablet'
-            }
-        ]
     },
     {
         label: t('in-delivery'),
         icon: 'pi pi-box',
-        items: [
-            {
-                label: 'Phone',
-                icon: 'pi pi-mobile'
-            },
-            {
-                label: 'Desktop',
-                icon: 'pi pi-desktop'
-            },
-            {
-                label: 'Tablet',
-                icon: 'pi pi-tablet'
-            }
-        ]
     },
     {
         label: t('pick-up'),
         icon: 'pi pi-shop',
-        items: [
-            {
-                label: 'Phone',
-                icon: 'pi pi-mobile'
-            },
-            {
-                label: 'Desktop',
-                icon: 'pi pi-desktop'
-            },
-            {
-                label: 'Tablet',
-                icon: 'pi pi-tablet'
-            }
-        ]
     },
     {
         label: t('accepted'),
         icon: 'pi pi-cart-plus',
-        items: [
-            {
-                label: 'Phone',
-                icon: 'pi pi-mobile'
-            },
-            {
-                label: 'Desktop',
-                icon: 'pi pi-desktop'
-            },
-            {
-                label: 'Tablet',
-                icon: 'pi pi-tablet'
-            }
-        ]
     },
 ]);
 </script>
