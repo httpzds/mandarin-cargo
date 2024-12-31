@@ -5,7 +5,7 @@
     </div>
     <div class="avatar flex justify-center align-items-center">
         <Avatar :image="logo" class="mr-2" size="large" />
-        <h1>{{$t('title')}}</h1>
+        <h1>{{ $t('title') }}</h1>
     </div>
     <div class="card justify-center">
         <!-- <InputText class="w-full pi pi-search" type="text" v-model="value" placeholder="Search"/> -->
@@ -15,7 +15,7 @@
         </div> -->
         <InputGroup>
             <InputGroupAddon>
-                <Button icon="pi pi-search" severity="secondary" variant="text"/>
+                <Button icon="pi pi-search" severity="secondary" variant="text" />
             </InputGroupAddon>
             <InputText :placeholder="$t('placeholders.search')" />
         </InputGroup>
@@ -26,7 +26,8 @@
     <Panel class="panel">
         <PanelMenu :model="items" class="w-full md:w-80 panel-menu">
             <template #item="{ item }">
-                <a v-ripple class="flex align-items-center px-3 py-2 cursor-pointer group">
+                <a v-ripple class="flex align-items-center px-3 py-2 cursor-pointer group"
+                    @click="navigateToUrl(item.url)">
                     <span :class="[item.icon, 'text-primary group-hover:text-inherit']" />
                     <span class="ml-2">{{ item.label }}</span>
                     <Badge v-if="item.badge" class="ml-auto" :value="item.badge" />
@@ -53,47 +54,61 @@ import InputGroupAddon from 'primevue/inputgroupaddon';
 
 import { useI18n } from "vue-i18n";
 
-const { t } = useI18n(); 
-
 import logo from "@/assets/logo.png";
+
+const { t } = useI18n();
+
+const navigateToUrl = (url) => {
+    if (url) {
+        window.location.href = url;
+    }
+};
 
 const items = ref([
     {
         label: t('pending'),
         icon: 'pi pi-clock',
         badge: 3,
+        url: 'https://picsum.photos/',
         items: [
             {
                 label: 'Documents',
                 icon: 'pi pi-file',
+                url: 'https://picsum.photos/',
                 items: [
                     {
                         label: 'Invoices',
                         icon: 'pi pi-file-pdf',
+                        url: 'https://picsum.photos/',
                         items: [
                             {
                                 label: 'Pending',
-                                icon: 'pi pi-stop'
+                                icon: 'pi pi-stop',
+                                url: 'https://picsum.photos/'
                             },
                             {
                                 label: 'Paid',
-                                icon: 'pi pi-check-circle'
+                                icon: 'pi pi-check-circle',
+                                url: 'https://picsum.photos/'
                             }
                         ]
                     },
                     {
                         label: 'Clients',
-                        icon: 'pi pi-users'
+                        icon: 'pi pi-users',
+                        url: 'https://picsum.photos/'
                     }
                 ]
             },
             {
                 label: 'Images',
                 icon: 'pi pi-image',
+                url: 'https://picsum.photos/',
                 items: [
                     {
                         label: 'Logos',
-                        icon: 'pi pi-image'
+                        icon: 'pi pi-image',
+                        url: 'https://picsum.photos/'
                     }
                 ]
             }
@@ -102,66 +117,73 @@ const items = ref([
     {
         label: t('in-stock'),
         icon: 'pi pi-warehouse',
+        url: 'https://picsum.photos/'
     },
     {
         label: t('on-the-way'),
         icon: 'pi pi-truck',
+        url: 'https://picsum.photos/'
     },
     {
         label: t('sorting'),
         icon: 'pi pi-clipboard',
+        url: 'https://picsum.photos/'
     },
     {
         label: t('in-delivery'),
         icon: 'pi pi-box',
+        url: 'https://picsum.photos/'
     },
     {
         label: t('pick-up'),
         icon: 'pi pi-shop',
+        url: 'https://picsum.photos/'
     },
     {
         label: t('accepted'),
         icon: 'pi pi-cart-plus',
+        url: 'https://picsum.photos/'
     },
 ]);
 </script>
 
+
 <style>
-.wallet-chip{
+.wallet-chip {
     display: flex;
     justify-content: end;
     align-items: end;
-    margin-top: -6px;
-    margin-bottom: -26px;
+    margin-top: -0.375rem;
+    margin-bottom: -1.625rem;
 }
 
 .wallet-chip .bg-primary {
     background-color: rebeccapurple;
 }
 
-.bg-primary{
-    width: 32px;
-    height: 32px;
+.bg-primary {
+    width: 2rem;
+    height: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 10px;
+    margin-left: .625rem;
     border-radius: 50%;
 }
 
-.avatar{
-    margin-bottom: 5px;
+.avatar {
+    margin-bottom: .3125rem;
 }
 
-.card{
-    margin-bottom: 14px;
+.card {
+    margin-bottom: .875rem;
 }
 
-.panel{
+.panel {
     padding: 0;
 }
 
-.panel-menu{
-    margin-top: -16px;
+.panel-menu {
+    margin-top: -1rem;
 }
 </style>
