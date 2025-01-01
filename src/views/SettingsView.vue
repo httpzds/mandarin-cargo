@@ -73,15 +73,19 @@
         </ul>
     </div>
     <div class="referral-panel">
-        <Panel class="referral">
-            <div class="referral-header">
-                <span class="referral-bonus">{{ $t('ref-panel.bonus') }}</span>
-                <p>{{ $t('ref-panel.desc') }}</p>
-                <Button class="referral-button" :label="$t('ref-panel.btn')" />
-                <!-- <ButtonLink/> -->
-            </div>
-        </Panel>
-    </div>
+    <Panel class="referral">
+        <div class="referral-header">
+            <span class="referral-bonus">{{ $t('ref-panel.bonus') }}</span>
+            <p>{{ $t('ref-panel.desc') }}</p>
+            <Button class="referral-button-wrapper">
+                <button class="referral-button">
+                    <span>{{ $t('ref-panel.btn') }}</span>
+                </button>
+            </Button>
+        </div>
+    </Panel>
+</div>
+
     <div class="card-container">
         <div class="card" v-for="n in 6" :key="n">
             <div class="card-title">Title {{ n }}</div>
@@ -369,26 +373,39 @@ const load = () => {
     margin-bottom: -0.5rem;
 }
 
-.referral .p-button::before {
-    content: 'Share Link';
-    background: linear-gradient(80deg, hsl(228, 94%, 59%), #15eefd);
+/* .referral .p-button::before { */
+    /* content: 'Share Link'; */
+    /* background: linear-gradient(80deg, hsl(228, 94%, 59%), #15eefd);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+    -webkit-text-fill-color: transparent; */
+    /* color: transparent;
     position: absolute;
-    inset: 0;
-    display: flex;
+    inset: 0; */
+    /* display: flex;
     align-items: center;
-    justify-content: center;
-    z-index: 1;
-}
+    justify-content: center; */
+    /* z-index: 1; */
+/* } */
 
 .referral .p-button:hover {
     opacity: 0.9;
 }
 
 .referral-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: white;
+    border: none;
+    font-size: 16px;
+    background: linear-gradient(80deg, hsl(228, 94%, 59%), #15eefd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-family: "Inter", serif;
+    z-index: 1;
+    color: transparent;
+    inset: 0;
 }
 
 .card-container {
